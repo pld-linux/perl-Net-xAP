@@ -10,7 +10,8 @@ Summary(pl):	Modu³ Perla Net::xAP - interfejs do rodziny protoko³ów IMAP/ACAP/IM
 Name:		perl-Net-xAP
 Version:	0.02
 Release:	2
-License:	Artistic or GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}%{pnam}-%{version}.tar.gz
 # Source0-md5:	df6ddaa8dad8d366784bf9a2a1f8eed1
@@ -49,7 +50,6 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
