@@ -37,7 +37,7 @@ IMAP. Uwaga: to jest wersja alpha!
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %{?_with_tests:%{__make} test}
