@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test" (requires IMAP server)
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Net
-%define		pnam	xAP
+%define	pdir	Net
+%define	pnam	xAP
 Summary:	Net::xAP Perl module - interface to IMAP/ACAP/IMSP/ICAP protocol family
 Summary(pl):	Modu³ Perla Net::xAP - interfejs do rodziny protoko³ów IMAP/ACAP/IMSP/ICAP
 Name:		perl-Net-xAP
