@@ -8,14 +8,14 @@ Summary:	Net::xAP Perl module - interface to IMAP/ACAP/IMSP/ICAP protocol family
 Summary(pl):	Modu³ Perla Net::xAP - interfejs do rodziny protoko³ów IMAP/ACAP/IMSP/ICAP
 Name:		perl-Net-xAP
 Version:	0.02
-Release:	1
+Release:	2
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Digest-HMAC
 BuildRequires:	perl-MIME-Base64 >= 2.11
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-Digest-MD5 >= 2.01
 Requires:	perl-MIME-Base64 >= 2.11
 BuildArch:	noarch
@@ -35,7 +35,8 @@ IMAP. Uwaga: to jest wersja alpha!
 %setup -q -n %{pdir}%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{?_with_tests:%{__make} test}
@@ -55,6 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ANNOUNCE BUGS CREDITS NEWS README TODO
-%{perl_sitelib}/Net/*.pm
+%{perl_vendorlib}/Net/*.pm
 %{_mandir}/man3/*
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}
