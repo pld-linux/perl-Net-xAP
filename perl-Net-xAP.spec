@@ -35,7 +35,7 @@ IMAP. Uwaga: to jest wersja alpha!
 %setup -q -n %{pdir}%{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %{?_with_tests:%{__make} test}
