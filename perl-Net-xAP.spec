@@ -15,7 +15,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}%{pnam}-%{version}
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Digest-HMAC
 BuildRequires:	perl-MIME-Base64 >= 2.11
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 Requires:	perl-Digest-MD5 >= 2.01
 Requires:	perl-MIME-Base64 >= 2.11
 BuildArch:	noarch
