@@ -8,7 +8,7 @@ Summary:	Net::xAP Perl module - interface to IMAP/ACAP/IMSP/ICAP protocol family
 Summary(pl):	Modu³ Perla Net::xAP - interfejs do rodziny protoko³ów IMAP/ACAP/IMSP/ICAP
 Name:		perl-Net-xAP
 Version:	0.02
-Release:	1
+Release:	2
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}%{pnam}-%{version}.tar.gz
