@@ -1,6 +1,7 @@
 #
 # Conditional build:
-# _with_tests - perform "make test" (requires IMAP server)
+%bcond_with	tests	# perform "make test" (requires IMAP server)
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Net
 %define		pnam	xAP
@@ -40,7 +41,7 @@ IMAP. Uwaga: to jest wersja alpha!
 	INSTALLDIRS=vendor
 %{__make}
 
-%{?_with_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
