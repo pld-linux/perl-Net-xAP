@@ -6,7 +6,7 @@
 %define		pdir	Net
 %define		pnam	xAP
 Summary:	Net::xAP Perl module - interface to IMAP/ACAP/IMSP/ICAP protocol family
-Summary(pl.UTF-8):   Moduł Perla Net::xAP - interfejs do rodziny protokołów IMAP/ACAP/IMSP/ICAP
+Summary(pl.UTF-8):	Moduł Perla Net::xAP - interfejs do rodziny protokołów IMAP/ACAP/IMSP/ICAP
 Name:		perl-Net-xAP
 Version:	0.02
 Release:	3
