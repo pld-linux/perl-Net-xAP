@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_with	tests	# perform "make test" (requires IMAP server)
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Net
 %define		pnam	xAP
+%include	/usr/lib/rpm/macros.perl
 Summary:	Net::xAP Perl module - interface to IMAP/ACAP/IMSP/ICAP protocol family
 Summary(pl.UTF-8):	Moduł Perla Net::xAP - interfejs do rodziny protokołów IMAP/ACAP/IMSP/ICAP
 Name:		perl-Net-xAP
@@ -15,9 +15,10 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}%{pnam}-%{version}.tar.gz
 # Source0-md5:	df6ddaa8dad8d366784bf9a2a1f8eed1
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		http://search.cpan.org/dist/Net-xAP/
 BuildRequires:	perl-Digest-HMAC
 BuildRequires:	perl-MIME-Base64 >= 2.11
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-Digest-MD5 >= 2.01
 Requires:	perl-MIME-Base64 >= 2.11
@@ -50,7 +51,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -p examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
